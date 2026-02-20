@@ -10,6 +10,8 @@ import Admin from "./pages/Admin";
 import Analytics from "./pages/Analytics";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
+import SkillGap from "./pages/SkillGap";
+
 
 function App() {
   return (
@@ -47,6 +49,12 @@ function App() {
               <Analytics />
             </ProtectedRoute>
           }/>
+         <Route path="/skill-gap" element={
+           <ProtectedRoute>
+             <SkillGap />
+           </ProtectedRoute>
+        }/>
+
 
         </Routes>
       </div>
