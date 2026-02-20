@@ -8,7 +8,7 @@ function Community() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    axios.get("http://localhost:5000/posts")
+    axios.get("/api/posts")
       .then(res => setPosts(res.data));
   }, []);
 
@@ -16,7 +16,7 @@ function Community() {
     e.preventDefault();
 
     await axios.post(
-      "http://localhost:5000/posts",
+      "/api/posts",
       form,
       { headers: { Authorization: `Bearer ${token}` } }
     );

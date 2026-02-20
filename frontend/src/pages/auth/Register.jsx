@@ -28,7 +28,7 @@ function Register() {
     }
 
     try {
-      await axios.post("http://localhost:5000/register", form);
+      await axios.post("/api/register", form);
       alert("Registered successfully");
       navigate("/login");
     } catch (err) {

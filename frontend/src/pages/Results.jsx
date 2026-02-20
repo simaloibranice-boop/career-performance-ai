@@ -8,7 +8,7 @@ function Results() {
     if (!token) return;
 
     axios.post(
-      "http://localhost:5000/analysis",
+      "/api/analysis",
       {
         skills: ["React", "Node"],
         experience: "Intermediate",
